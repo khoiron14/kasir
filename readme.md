@@ -35,6 +35,36 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: ItemCategory, Item
 
     ![](carbon/6.png)
     
-1. Buka file migration yang telah dibuat dan inisialisasikan atribut tablenya.
+    Buka file migration yang telah dibuat dan inisialisasikan atribut tablenya.
 
     ![](carbon/7.png)
+
+1. Membuat model Item beserta migrationnya.
+
+    ![](carbon/8.png)
+
+    ![](carbon/9.png)
+
+1. Membuat model Cart beserta migrationnya.
+
+    ![](carbon/10.png)
+
+    ![](carbon/11.png)
+
+1. Membuat model Transaction beserta migrationnya.
+
+    ![](carbon/12.png)
+
+    ![](carbon/13.png)
+
+1. Membuat model TransactionDetail beserta migrationnya.
+
+    ![](carbon/14.png)
+    
+    ![](carbon/15.png)
+
+1. Membuat sebuah file migration untuk trigger bernama item_stock_trigger
+
+    ![](carbon/16.png)
+
+    ![](carbon/17.png)

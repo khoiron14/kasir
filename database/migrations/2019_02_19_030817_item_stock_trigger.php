@@ -13,7 +13,14 @@ class ItemStockTrigger extends Migration
      */
     public function up()
     {
-        //
+        DB::unprepared('
+            CREATE TRIGGER item_stock_trigger
+            AFTER INSERT ON `transaction_details`
+            FOR EACH ROW
+            BEGIN
+                UPDATE `items` SET stock=stock - NEW.quantity WHERE NEW.item_id;
+            END
+        ');
     }
 
     /**
@@ -23,6 +30,6 @@ class ItemStockTrigger extends Migration
      */
     public function down()
     {
-        //
+        DB::unprepared('DROP TRIGGER IF EXISTS item_stock_trigger');
     }
 }

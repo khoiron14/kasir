@@ -68,3 +68,50 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: ItemCategory, Item
     ![](carbon/16.png)
 
     ![](carbon/17.png)
+    
+1. Memindahkan database migration ke database MySql
+
+    ![](carbon/17b.png)
+    
+    Apabila terjadi error `SQLSTATE[42000]: Syntax error...` saat migrate, buka file `app/Providers/AppServiceProvider.php` dan ubah menjadi seperti berikut
+    
+    ![](carbon/17c.png)
+    
+    Lalu ulangi lagi perintah berikut
+
+    ![](carbon/17b.png)
+
+## E. Menambah Fungsi Relasi
+Fungsi - fungsi ini terdapat pada direktori app\ yang berfungsi sebagai menyimpan seluruh file yang berkaitan dengan proses request dan response HTTP.
+
+1. Cart.php
+    
+    ![](carbon/18.png)
+    
+1. Item.php
+    
+    ![](carbon/19.png)
+
+1. ItemCategory.php
+    
+    ![](carbon/20.png)
+    
+1. Transaction.php
+    
+    ![](carbon/21.png)
+    
+1. TransactionDetail.php
+    
+    ![](carbon/22.png)
+
+1. User.php
+    
+    ![](carbon/23.png)
+
+## F. Membuat Halaman Login
+Di Laravel, untuk membuat halaman login lengkap dengan registernya, hanya perlu menjalankan perintah berikut
+
+![](carbon/24.png)
+
+Lalu refresh projek laravel pada browser
+

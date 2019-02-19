@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\ItemCategory as Category;
 use App\Cart;
+use App\Transaction;
+use App\TransactionDetail;
 
 class Item extends Model
 {
@@ -16,5 +18,9 @@ class Item extends Model
 
     public function cart() {
     	return $this->hasOne(Cart::class);
+    }
+
+    public function transactions() {
+    	return $this->hasManyThrough(Transaction::class, TransactionDetail::class);
     }
 }

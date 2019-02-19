@@ -15,7 +15,14 @@ class CreateTransactionDetailsTable extends Migration
     {
         Schema::create('transaction_details', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('transaction_id');
+            $table->unsignedInteger('item_id');
+            $table->unsignedInteger('quantity');
+            $table->unsignedInteger('subtotal');
             $table->timestamps();
+
+            $table->foreign('transaction_id')->references('id')->on('transactions')->onDelete('cascade');
+            $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
         });
     }
 

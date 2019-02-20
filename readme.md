@@ -82,7 +82,7 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: ItemCategory, Item
     ![](carbon/17b.png)
 
 ## E. Menambah Fungsi Relasi
-Fungsi - fungsi ini terdapat pada direktori app\ yang berfungsi sebagai menyimpan seluruh file yang berkaitan dengan proses request dan response HTTP.
+Fungsi - fungsi ini terdapat pada direktori app\ yang berfungsi untuk menyimpan seluruh file yang berkaitan dengan proses request dan response HTTP.
 
 1. Cart.php
     

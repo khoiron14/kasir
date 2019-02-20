@@ -12,6 +12,9 @@
 1. Install Laravel
 
     ![](carbon/1.png)
+    
+1. Selanjutnya masuk ke folder project kasir dan lanjut ke langkah berikutnya
+
 ## C. Konfigurasi
 1. Buat database dengan nama `dbKasir`
 1. Buka project kasir dengan text editor

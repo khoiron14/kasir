@@ -35,6 +35,83 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: ItemCategory, Item
 
     ![](carbon/6.png)
     
-1. Buka file migration yang telah dibuat dan inisialisasikan atribut tablenya.
+    Buka file migration yang telah dibuat dan inisialisasikan atribut tablenya.
 
     ![](carbon/7.png)
+
+1. Membuat model Item beserta migrationnya.
+
+    ![](carbon/8.png)
+
+    ![](carbon/9.png)
+
+1. Membuat model Cart beserta migrationnya.
+
+    ![](carbon/10.png)
+
+    ![](carbon/11.png)
+
+1. Membuat model Transaction beserta migrationnya.
+
+    ![](carbon/12.png)
+
+    ![](carbon/13.png)
+
+1. Membuat model TransactionDetail beserta migrationnya.
+
+    ![](carbon/14.png)
+    
+    ![](carbon/15.png)
+
+1. Membuat sebuah file migration untuk trigger bernama item_stock_trigger
+
+    ![](carbon/16.png)
+
+    ![](carbon/17.png)
+    
+1. Memindahkan database migration ke database MySql
+
+    ![](carbon/18.png)
+    
+    Apabila terjadi error `SQLSTATE[42000]: Syntax error...` saat migrate, buka file `app/Providers/AppServiceProvider.php` dan ubah menjadi seperti berikut
+    
+    ![](carbon/19.png)
+    
+    Lalu ulangi lagi perintah berikut
+
+    ![](carbon/18.png)
+
+## E. Menambah Fungsi Relasi
+Fungsi - fungsi ini terdapat pada direktori app\ yang berfungsi sebagai menyimpan seluruh file yang berkaitan dengan proses request dan response HTTP.
+
+1. Cart.php
+    
+    ![](carbon/20.png)
+    
+1. Item.php
+    
+    ![](carbon/21.png)
+
+1. ItemCategory.php
+    
+    ![](carbon/22.png)
+    
+1. Transaction.php
+    
+    ![](carbon/23.png)
+    
+1. TransactionDetail.php
+    
+    ![](carbon/24.png)
+
+1. User.php
+    
+    ![](carbon/25.png)
+
+## F. Membuat Halaman Login
+Di Laravel, untuk membuat halaman login lengkap dengan registernya, hanya perlu menjalankan perintah berikut
+
+![](carbon/26.png)
+
+Lalu refresh projek laravel pada browser
+

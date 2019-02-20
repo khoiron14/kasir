@@ -32,7 +32,7 @@
                                         </div>
 
                                         <div class="modal-body">
-                                            <table class="table table-stripped">
+                                            <table class="table table-striped">
                                                 <thead class="thead-dark">
                                                     <tr>
                                                         <th scope="col">#</th>
@@ -135,7 +135,7 @@
         </div>
     </div>
 
-    <table class="table table-stripped">
+    <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>

@@ -42,7 +42,22 @@
                                                         <th scope="col">Stok</th>
                                                         <th scope="col">Opsi</th>
                                                     </tr>
-                                                </thead></tbody>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach($items as $key => $item)
+                                                        <tr>
+                                                            <th scope="row">{{ $key + 1 }}</th>
+                                                            <td>{{ $item->name }}</td>
+                                                            <td>{{ $item->category->name }}</td>
+                                                            <td>{{ $item->description }}</td>
+                                                            <td>Rp. {{ $item->price }}</td>
+                                                            <td>{{ $item->stock }}</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-sm btn-primary">Pilih</button>
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
                                             </table>
                                         </div>
                                     </div>

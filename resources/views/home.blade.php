@@ -10,11 +10,11 @@
                 </div>
                 <div class="card-body">
                     <form>
-                        <input type="hidden" name="item_id">
+                        <input type="hidden" name="item_id" id="itemId">
 
                         <div class="form-group">
                             <div class="input-group">
-                                <input type="text" class="form-control" name="item_name" placeholder="Pilih barang..." disabled required>
+                                <input type="text" class="form-control" name="item_name" id="itemName" placeholder="Pilih barang..." readonly required>
                                 <div class="input-group-append">
                                     <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pilihBarang">Pilih</button>
                                 </div>
@@ -53,7 +53,17 @@
                                                             <td>Rp. {{ $item->price }}</td>
                                                             <td>{{ $item->stock }}</td>
                                                             <td>
-                                                                <button type="button" class="btn btn-sm btn-primary">Pilih</button>
+                                                                <button 
+                                                                    type="button" 
+                                                                    class="btn btn-sm btn-primary" 
+                                                                    data-dismiss="modal"
+                                                                    onclick="
+                                                                        $('#itemId').val('{{ $item->id }}')
+                                                                        $('#itemName').val('{{ $item->name }}')
+                                                                    "
+                                                                >
+                                                                    Pilih
+                                                                </button>
                                                             </td>
                                                         </tr>
                                                     @endforeach
@@ -135,7 +145,7 @@
                 <th scope="col">Jumlah</th>
                 <th scope="col">Subtotal</th>
             </tr>
-        </thead></tbody>
+        </thead>
     </table>
 </div>
 @endsection

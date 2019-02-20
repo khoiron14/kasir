@@ -9,12 +9,13 @@
                     Pilih Barang
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('cart.store') }}" method="post">
+                        @csrf
                         <input type="hidden" name="item_id" id="itemId">
 
                         <div class="form-group">
                             <div class="input-group">
-                                <input type="text" class="form-control" name="item_name" id="itemName" placeholder="Pilih barang..." readonly required>
+                                <input type="text" class="form-control" id="itemName" placeholder="Pilih barang..." readonly>
                                 <div class="input-group-append">
                                     <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#pilihBarang">Pilih</button>
                                 </div>
@@ -50,7 +51,7 @@
                                                             <td>{{ $item->name }}</td>
                                                             <td>{{ $item->category->name }}</td>
                                                             <td>{{ $item->description }}</td>
-                                                            <td>Rp. {{ $item->price }}</td>
+                                                            <td>Rp {{ $item->price }}</td>
                                                             <td>{{ $item->stock }}</td>
                                                             <td>
                                                                 <button 
@@ -146,6 +147,21 @@
                 <th scope="col">Subtotal</th>
             </tr>
         </thead>
+        <tbody>
+            @foreach($items as $key => $item)
+                @if($item->cart)
+                    <tr>
+                        <th scope="row">{{ $key + 1 }}</th>
+                        <td>{{ $item->name }}</td>
+                        <td>{{ $item->category->name }}</td>
+                        <td>{{ $item->description }}</td>
+                        <td>Rp {{ $item->price }}</td>
+                        <td>{{ $item->cart->quantity }}</td>
+                        <td>Rp {{ $item->price * $item->cart->quantity }}</td>
+                    </tr>
+                @endif
+            @endforeach
+        </tbody>
     </table>
 </div>
 @endsection

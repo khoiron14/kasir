@@ -8,6 +8,7 @@
 ## B. Install
 1. Install [Composer](https://getcomposer.org/download/)
 1. Buka CMD atau Terminal
+1. Arahkan direktori cmd ke dalam `xampp/htdocs/` untuk windows dan `var/www/html/` untuk linux
 1. Install Laravel
 
     ![](carbon/1.png)

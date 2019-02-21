@@ -122,7 +122,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Jumlah Bayar</label>
+                            <label class="col-sm-2 col-form-label">Total Bayar</label>
 
                             <div class="input-group col-sm-10">
                                 <div class="input-group-prepend">

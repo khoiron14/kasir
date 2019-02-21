@@ -23,6 +23,18 @@ class TransactionController extends Controller
 
     	Cart::whereNotNull('id')->delete();
 
-    	return redirect()->back();
+    	return redirect()->route('transaction.show', Transaction::latest()->first());
+    }
+
+    public function index() 
+    {
+    	$transactions = Transaction::latest()->get();
+
+    	return view('transaction.index', compact('transactions'));
+    }
+
+    public function show(Transaction $transaction) 
+    {
+    	return view('transaction.show', compact('transaction'));
     }
 }

@@ -45,9 +45,9 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach($items as $key => $item)
+                                                    @foreach($items as $item)
                                                         <tr>
-                                                            <th scope="row">{{ $key + 1 }}</th>
+                                                            <th scope="row">{{ $loop->iteration }}</th>
                                                             <td>{{ $item->name }}</td>
                                                             <td>{{ $item->category->name }}</td>
                                                             <td>{{ $item->description }}</td>
@@ -148,9 +148,9 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($itemCarts as $key => $item)
+            @foreach($itemCarts as $item)
                 <tr>
-                    <th scope="row">{{ $key + 1 }}</th>
+                    <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->category->name }}</td>
                     <td>{{ $item->description }}</td>

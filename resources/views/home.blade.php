@@ -160,7 +160,12 @@
                     <td>Rp {{ $item->price * $item->cart->quantity }}</td>
                     <td>
                         <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ubahJumlah{{ $loop->iteration }}">Ubah</button>
-                        <button class="btn btn-sm btn-danger">Hapus</button>
+                        <form action="{{ route('cart.destroy', $item->cart) }}" method="post" class="d-inline">
+                            @csrf
+                            @method('DELETE')
+
+                            <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                        </form>
 
                         <div class="modal fade" id="ubahJumlah{{ $loop->iteration }}">
                             <div class="modal-dialog">

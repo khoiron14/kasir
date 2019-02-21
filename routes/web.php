@@ -17,3 +17,4 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::patch('/cart/{cart}', 'CartController@update')->name('cart.update');
+Route::delete('/cart/{cart}', 'CartController@destroy')->name('cart.destroy');

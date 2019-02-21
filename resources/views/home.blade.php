@@ -46,27 +46,29 @@
                                                 </thead>
                                                 <tbody>
                                                     @foreach($items as $key => $item)
-                                                        <tr>
-                                                            <th scope="row">{{ $key + 1 }}</th>
-                                                            <td>{{ $item->name }}</td>
-                                                            <td>{{ $item->category->name }}</td>
-                                                            <td>{{ $item->description }}</td>
-                                                            <td>Rp {{ $item->price }}</td>
-                                                            <td>{{ $item->stock }}</td>
-                                                            <td>
-                                                                <button 
-                                                                    type="button" 
-                                                                    class="btn btn-sm btn-primary" 
-                                                                    data-dismiss="modal"
-                                                                    onclick="
-                                                                        $('#itemId').val('{{ $item->id }}')
-                                                                        $('#itemName').val('{{ $item->name }}')
-                                                                    "
-                                                                >
-                                                                    Pilih
-                                                                </button>
-                                                            </td>
-                                                        </tr>
+                                                        @if(!$item->cart)
+                                                            <tr>
+                                                                <th scope="row">{{ $key + 1 }}</th>
+                                                                <td>{{ $item->name }}</td>
+                                                                <td>{{ $item->category->name }}</td>
+                                                                <td>{{ $item->description }}</td>
+                                                                <td>Rp {{ $item->price }}</td>
+                                                                <td>{{ $item->stock }}</td>
+                                                                <td>
+                                                                    <button 
+                                                                        type="button" 
+                                                                        class="btn btn-sm btn-primary" 
+                                                                        data-dismiss="modal"
+                                                                        onclick="
+                                                                            $('#itemId').val('{{ $item->id }}')
+                                                                            $('#itemName').val('{{ $item->name }}')
+                                                                        "
+                                                                    >
+                                                                        Pilih
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        @endif
                                                     @endforeach
                                                 </tbody>
                                             </table>

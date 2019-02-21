@@ -105,7 +105,18 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Rp</span>
                                 </div>
-                                <input type="number" class="form-control" name="total" placeholder="0" disabled required>
+                                <input 
+                                    type="number" 
+                                    class="form-control" 
+                                    name="total" 
+                                    value="{{ 
+                                        $itemCarts->sum(function ($item) {
+                                            return $item->price * $item->cart->quantity;
+                                        })
+                                    }}" 
+                                    placeholder="0" 
+                                    disabled 
+                                    required>
                             </div>
                         </div>
 
@@ -116,7 +127,17 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Rp</span>
                                 </div>
-                                <input type="number" class="form-control" name="pay-total" placeholder="0" required>
+                                <input 
+                                    type="number" 
+                                    class="form-control" 
+                                    name="pay-total" 
+                                    placeholder="0" 
+                                    min="{{
+                                        $itemCarts->sum(function ($item) {
+                                            return $item->price * $item->cart->quantity;
+                                        })
+                                    }}"
+                                    required>
                             </div>
                         </div>
 

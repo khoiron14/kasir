@@ -14,4 +14,11 @@ class CartController extends Controller
 
     	return redirect()->back();
     }
+
+    public function update(Cart $cart)
+    {
+    	$cart->update(request()->all());
+
+    	return redirect()->back();
+    }
 }

@@ -145,6 +145,7 @@
                 <th scope="col">Harga</th>
                 <th scope="col">Jumlah</th>
                 <th scope="col">Subtotal</th>
+                <th scope="col">Opsi</th>
             </tr>
         </thead>
         <tbody>
@@ -157,7 +158,42 @@
                     <td>Rp {{ $item->price }}</td>
                     <td>{{ $item->cart->quantity }}</td>
                     <td>Rp {{ $item->price * $item->cart->quantity }}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#ubahJumlah{{ $loop->iteration }}">Ubah</button>
+                        <button class="btn btn-sm btn-danger">Hapus</button>
+
+                        <div class="modal fade" id="ubahJumlah{{ $loop->iteration }}">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Ubah Jumlah '{{ $item->name }}'</h5>
+                                        <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <form action="{{ route('cart.update', $item->cart) }}" method="post">
+                                            @csrf
+                                            @method('PATCH')
+                                            
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="number" min="1" value="{{ $item->cart->quantity }}" class="form-control" name="quantity" placeholder="Masukkan jumlah..." required>
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">Unit</span>
+                                                        <button type="submit" class="btn btn-primary float-right">Ubah</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
+
             @endforeach
         </tbody>
     </table>

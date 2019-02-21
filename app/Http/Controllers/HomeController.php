@@ -24,8 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $items = Item::where('stock', '>', 0)->orderBy('name')->get();
+        $items = Item::doesntHave('cart')->where('stock', '>', 0)->get()->sortBy('name');
+        $itemCarts = Item::has('cart')->get()->sortByDesc('cart.created_at');
 
-        return view('home', compact('items'));
+        return view('home', compact(['items', 'itemCarts']));
     }
 }

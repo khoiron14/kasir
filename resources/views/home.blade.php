@@ -46,29 +46,27 @@
                                                 </thead>
                                                 <tbody>
                                                     @foreach($items as $key => $item)
-                                                        @if(!$item->cart)
-                                                            <tr>
-                                                                <th scope="row">{{ $key + 1 }}</th>
-                                                                <td>{{ $item->name }}</td>
-                                                                <td>{{ $item->category->name }}</td>
-                                                                <td>{{ $item->description }}</td>
-                                                                <td>Rp {{ $item->price }}</td>
-                                                                <td>{{ $item->stock }}</td>
-                                                                <td>
-                                                                    <button 
-                                                                        type="button" 
-                                                                        class="btn btn-sm btn-primary" 
-                                                                        data-dismiss="modal"
-                                                                        onclick="
-                                                                            $('#itemId').val('{{ $item->id }}')
-                                                                            $('#itemName').val('{{ $item->name }}')
-                                                                        "
-                                                                    >
-                                                                        Pilih
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                        @endif
+                                                        <tr>
+                                                            <th scope="row">{{ $key + 1 }}</th>
+                                                            <td>{{ $item->name }}</td>
+                                                            <td>{{ $item->category->name }}</td>
+                                                            <td>{{ $item->description }}</td>
+                                                            <td>Rp {{ $item->price }}</td>
+                                                            <td>{{ $item->stock }}</td>
+                                                            <td>
+                                                                <button 
+                                                                    type="button" 
+                                                                    class="btn btn-sm btn-primary" 
+                                                                    data-dismiss="modal"
+                                                                    onclick="
+                                                                        $('#itemId').val('{{ $item->id }}')
+                                                                        $('#itemName').val('{{ $item->name }}')
+                                                                    "
+                                                                >
+                                                                    Pilih
+                                                                </button>
+                                                            </td>
+                                                        </tr>
                                                     @endforeach
                                                 </tbody>
                                             </table>
@@ -150,18 +148,16 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($items as $key => $item)
-                @if($item->cart)
-                    <tr>
-                        <th scope="row">{{ $key + 1 }}</th>
-                        <td>{{ $item->name }}</td>
-                        <td>{{ $item->category->name }}</td>
-                        <td>{{ $item->description }}</td>
-                        <td>Rp {{ $item->price }}</td>
-                        <td>{{ $item->cart->quantity }}</td>
-                        <td>Rp {{ $item->price * $item->cart->quantity }}</td>
-                    </tr>
-                @endif
+            @foreach($itemCarts as $key => $item)
+                <tr>
+                    <th scope="row">{{ $key + 1 }}</th>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->category->name }}</td>
+                    <td>{{ $item->description }}</td>
+                    <td>Rp {{ $item->price }}</td>
+                    <td>{{ $item->cart->quantity }}</td>
+                    <td>Rp {{ $item->price * $item->cart->quantity }}</td>
+                </tr>
             @endforeach
         </tbody>
     </table>

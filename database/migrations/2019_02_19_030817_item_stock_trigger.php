@@ -18,7 +18,7 @@ class ItemStockTrigger extends Migration
             AFTER INSERT ON `transaction_details`
             FOR EACH ROW
             BEGIN
-                UPDATE `items` SET stock=stock - NEW.quantity WHERE NEW.item_id;
+                UPDATE `items` SET stock=stock - NEW.quantity WHERE id=NEW.item_id;
             END
         ');
     }

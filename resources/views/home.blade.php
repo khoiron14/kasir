@@ -97,7 +97,8 @@
                     Pembayaran
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form action="{{ route('transaction.store') }}" method="post">
+                        @csrf
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Total Harga</label>
 
@@ -115,7 +116,7 @@
                                         })
                                     }}" 
                                     placeholder="0" 
-                                    disabled 
+                                    readonly 
                                     required>
                             </div>
                         </div>
@@ -130,7 +131,7 @@
                                 <input 
                                     type="number" 
                                     class="form-control" 
-                                    name="pay-total" 
+                                    name="pay_total" 
                                     placeholder="0" 
                                     min="{{
                                         $itemCarts->sum(function ($item) {

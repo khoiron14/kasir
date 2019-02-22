@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ItemStockTrigger extends Migration
+class ReduceStockItemProcedure extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,9 @@ class ItemStockTrigger extends Migration
     public function up()
     {
         DB::unprepared('
-            CREATE TRIGGER item_stock_trigger
-            AFTER INSERT ON `transaction_details`
-            FOR EACH ROW
+            CREATE PROCEDURE reduce_stock(IN item_id INT, IN quantity INT)
             BEGIN
-                CALL reduce_stock(NEW.item_id, NEW.quantity);
+                UPDATE `items` SET stock=stock - quantity WHERE id=item_id;
             END
         ');
     }
@@ -30,6 +28,6 @@ class ItemStockTrigger extends Migration
      */
     public function down()
     {
-        DB::unprepared('DROP TRIGGER IF EXISTS item_stock_trigger');
+        DB::unprepared('DROP PROCEDURE IF EXISTS reduce_stock');
     }
 }

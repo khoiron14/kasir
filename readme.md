@@ -146,3 +146,4 @@ Lalu refresh projek laravel pada browser
     1. `app/Http/Middleware/RedirectIfAuthenticated.php`
     
         ![](carbon/29.png)
+

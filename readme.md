@@ -147,3 +147,22 @@ Lalu refresh projek laravel pada browser
     
         ![](carbon/29.png)
 
+## H. Seeder ItemCategory
+
+1. Membuat `ItemCategorySeeder`
+    
+    ![](carbon/30.png)
+
+1. Menambah data seeder ItemCategory pada `database/seeds/ItemCategorySeeder.php`
+
+    ![](carbon/31.png)
+
+1. Memanggil `ItemCategorySeeder` pada `DatabaseSeeder`
+
+    ![](carbon/32.png)
+    
+1. Mengirim data `Item` ke `/` pada `app/Http/Controllers/HomeController.php`
+
+    ![](carbon/33.png                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               )
+
+

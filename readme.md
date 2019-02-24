@@ -165,4 +165,28 @@ Lalu refresh projek laravel pada browser
 
     ![](carbon/33.png                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               )
 
+1. (Update) mendefinisikan foreignKey `ItemCategory` pada `app/Item.php`
 
+    ![](carbon/34.png)
+
+1. 
+
+## I. Mengganti Layout yang Sudah Ada
+
+1. Ubah layout `resources/views/home.blade.php` menjadi seperti berikut
+
+    ![](carbon/35.png)
+
+    Atau copy code [berikut](https://raw.githubusercontent.com/Khoiron14/kasir/55559ebc26156193fb2c1405f1c9943ffea7c0df/resources/views/home.blade.php)
+
+1. Menampilkan data item di home
+
+    ![](carbon/36.png)
+
+    Untuk menampilkan modal seperti diatas saat button pilih barang di klik, tambahkan kode berikut pada bagian tag `<tbody>`
+    
+    ![](carbon/37.png)
+    
+    Sehingga menjadi seperti berikut
+    
+    ![](carbon/38.png)

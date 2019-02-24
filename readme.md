@@ -8,7 +8,6 @@
 ## B. Install
 1. Install [Composer](https://getcomposer.org/download/)
 1. Buka CMD atau Terminal
-1. Arahkan direktori cmd ke dalam `xampp/htdocs/` untuk windows dan `var/www/html/` untuk linux
 1. Install Laravel
 
     ![](carbon/1.png)
@@ -91,7 +90,7 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
 
     ![](carbon/17.png)
     
-1. Memindahkan database migration ke database MySql
+1. Melakukan migration ke database MySql
 
     ![](carbon/18.png)
     

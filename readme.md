@@ -32,8 +32,8 @@
 
     ![](carbon/5.png)
 
-## D. Membuat Model/Class dan Migration
-Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `Item`, `Cart`, `Transaction` dan `TransactionDetail`. Selain itu kita juga memerlukan 2 file migration lagi untuk membuat Trigger dan Function/Procedure.
+## D. Membuat File Migration dan Seed
+Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `Item`, `Cart`, `Transaction` dan `TransactionDetail`. Selain itu kita juga memerlukan 4 file migration lagi untuk membuat Function, Procedure, dan Trigger.
 
 1. Membuat model `ItemCategory` beserta migrationnya.
 
@@ -66,6 +66,24 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
     ![](carbon/14.png)
     
     ![](carbon/15.png)
+
+1. Membuat sebuah file migration untuk function bernama `item_id_function`
+
+    ![](carbon/42.png)
+
+    ![](carbon/39.png)
+
+1. Membuat sebuah file migration untuk function bernama `item_quantity_function`
+
+    ![](carbon/43.png)
+
+    ![](carbon/40.png)
+
+1. Membuat sebuah file migration untuk procedure bernama `reduce_stock_item_procedure`
+
+    ![](carbon/44.png)
+
+    ![](carbon/41.png)
 
 1. Membuat sebuah file migration untuk trigger bernama `item_stock_trigger`
 

@@ -72,7 +72,7 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
 
     ![](carbon/17.png)
     
-1. Memindahkan database migration ke database MySql
+1. Melakukan migration ke database MySql
 
     ![](carbon/18.png)
     

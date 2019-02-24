@@ -15,7 +15,7 @@ class ItemStockTrigger extends Migration
     {
         DB::unprepared('
             CREATE OR REPLACE TRIGGER item_stock_trigger
-            AFTER INSERT ON `transaction_details`
+            AFTER INSERT ON transaction_details
             FOR EACH ROW
             BEGIN
                 CALL reduce_stock(NEW.id);

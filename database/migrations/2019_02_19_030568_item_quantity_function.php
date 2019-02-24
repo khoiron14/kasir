@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ItemStockTrigger extends Migration
+class ItemQuantityFunction extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,11 @@ class ItemStockTrigger extends Migration
     public function up()
     {
         DB::unprepared('
-            CREATE OR REPLACE TRIGGER item_stock_trigger
-            AFTER INSERT ON `transaction_details`
-            FOR EACH ROW
+            CREATE OR REPLACE FUNCTION item_quantity(transaction_detail_id INT) RETURNS CHAR(20)
             BEGIN
-                CALL reduce_stock(NEW.id);
+                DECLARE qty INT;
+                SELECT `quantity` INTO qty FROM `transaction_details` WHERE id=transaction_detail_id;
+                RETURN qty;
             END
         ');
     }

@@ -89,6 +89,18 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
     ![](carbon/16.png)
 
     ![](carbon/17.png)
+
+1. Membuat seeder `ItemCategorySeeder`
+    
+    ![](carbon/30.png)
+
+1. Menambah data seeder ItemCategory pada `database/seeds/ItemCategorySeeder.php`
+
+    ![](carbon/31.png)
+
+1. Memanggil `ItemCategorySeeder` pada `DatabaseSeeder`
+
+    ![](carbon/32.png)
     
 1. Melakukan migration ke database MySql
 
@@ -137,7 +149,15 @@ Di Laravel, untuk membuat halaman login lengkap dengan registernya, hanya perlu 
 
 Lalu refresh projek laravel pada browser
 
-## G. Mengubah Route
+## G. Mengganti Layout yang Sudah Ada
+
+1. Ubah layout `resources/views/home.blade.php` menjadi seperti berikut
+
+    ![](carbon/35.png)
+
+    Atau copy code [berikut](https://raw.githubusercontent.com/Khoiron14/kasir/55559ebc26156193fb2c1405f1c9943ffea7c0df/resources/views/home.blade.php)
+
+## H. Mengubah Route
 1. Mengubah route `/` mengarah ke home pada file `routes/web.php`
 
     ![](carbon/27.png)
@@ -164,38 +184,7 @@ Lalu refresh projek laravel pada browser
     
         ![](carbon/29.png)
 
-## H. Seeder ItemCategory
-
-1. Membuat `ItemCategorySeeder`
-    
-    ![](carbon/30.png)
-
-1. Menambah data seeder ItemCategory pada `database/seeds/ItemCategorySeeder.php`
-
-    ![](carbon/31.png)
-
-1. Memanggil `ItemCategorySeeder` pada `DatabaseSeeder`
-
-    ![](carbon/32.png)
-    
-1. Mengirim data `Item` ke `/` pada `app/Http/Controllers/HomeController.php`
-
-    ![](carbon/33.png                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               )
-
-1. (Update) mendefinisikan foreignKey `ItemCategory` pada `app/Item.php`
-
-    ![](carbon/34.png)
-
-1. 
-
-## I. Mengganti Layout yang Sudah Ada
-
-1. Ubah layout `resources/views/home.blade.php` menjadi seperti berikut
-
-    ![](carbon/35.png)
-
-    Atau copy code [berikut](https://raw.githubusercontent.com/Khoiron14/kasir/55559ebc26156193fb2c1405f1c9943ffea7c0df/resources/views/home.blade.php)
-
+## H. Menampilkan data Item
 1. Menampilkan data item di home
 
     ![](carbon/36.png)

@@ -185,6 +185,11 @@ Lalu refresh projek laravel pada browser
         ![](carbon/29.png)
 
 ## H. Menampilkan data Item
+1. Mengirim data Item ke route '/' (home)
+    Buka file `app\Http\Controllers\HomeController.php` dan tambahkan code berikut
+
+    ![](carbon/45.png)
+
 1. Menampilkan data item di home
 
     ![](carbon/36.png)

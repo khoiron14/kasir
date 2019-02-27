@@ -14,10 +14,11 @@ class ItemQuantityFunction extends Migration
     public function up()
     {
         DB::unprepared('
-            CREATE OR REPLACE FUNCTION item_quantity(transaction_detail_id INT) RETURNS CHAR(20)
+            DROP FUNCTION IF EXISTS item_quantity;
+            CREATE FUNCTION item_quantity(transaction_detail_id INT) RETURNS INT
             BEGIN
                 DECLARE qty INT;
-                SELECT `quantity` INTO qty FROM `transaction_details` WHERE id=transaction_detail_id;
+                SET qty = (SELECT quantity FROM transaction_details WHERE id=transaction_detail_id);
                 RETURN qty;
             END
         ');

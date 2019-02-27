@@ -14,8 +14,9 @@ class ItemStockTrigger extends Migration
     public function up()
     {
         DB::unprepared('
-            CREATE OR REPLACE TRIGGER item_stock_trigger
-            AFTER INSERT ON `transaction_details`
+            DROP TRIGGER IF EXISTS item_stock_trigger;
+            CREATE TRIGGER item_stock_trigger
+            AFTER INSERT ON transaction_details
             FOR EACH ROW
             BEGIN
                 CALL reduce_stock(NEW.id);

@@ -14,9 +14,10 @@ class ReduceStockItemProcedure extends Migration
     public function up()
     {
         DB::unprepared('
-            CREATE OR REPLACE PROCEDURE reduce_stock(transaction_detail_id INT)
+            DROP PROCEDURE IF EXISTS reduce_stock;
+            CREATE PROCEDURE reduce_stock(transaction_detail_id INT)
             BEGIN
-                UPDATE `items` 
+                UPDATE items
                 SET stock=stock - item_quantity(transaction_detail_id)
                 WHERE id=item_id(transaction_detail_id);
             END

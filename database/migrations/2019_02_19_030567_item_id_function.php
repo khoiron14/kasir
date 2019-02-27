@@ -14,11 +14,12 @@ class ItemIdFunction extends Migration
     public function up()
     {
         DB::unprepared('
-            CREATE OR REPLACE FUNCTION item_id(transaction_detail_id INT) RETURNS CHAR(20)
+            DROP FUNCTION IF EXISTS item_id;
+            CREATE FUNCTION item_id(transaction_detail_id INT) RETURNS INT
             BEGIN
-                DECLARE id INT;
-                SELECT `item_id` INTO id FROM `transaction_details` WHERE id=transaction_detail_id;
-                RETURN id;
+                DECLARE id_item INT;
+                SET id_item = (SELECT item_id FROM transaction_details WHERE id=transaction_detail_id);
+                RETURN id_item;
             END
         ');
     }

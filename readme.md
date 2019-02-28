@@ -8,7 +8,6 @@
 ## B. Install
 1. Install [Composer](https://getcomposer.org/download/)
 1. Buka CMD atau Terminal
-1. Arahkan direktori cmd ke dalam `xampp/htdocs/` untuk windows dan `var/www/html/` untuk linux
 1. Install Laravel
 
     ![](carbon/1.png)
@@ -32,8 +31,8 @@
 
     ![](carbon/5.png)
 
-## D. Membuat Model/Class dan Migration
-Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `Item`, `Cart`, `Transaction` dan `TransactionDetail`. Selain itu kita juga memerlukan 2 file migration lagi untuk membuat Trigger dan Function/Procedure.
+## D. Membuat File Migration dan Seed
+Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `Item`, `Cart`, `Transaction` dan `TransactionDetail`. Selain itu kita juga memerlukan 4 file migration lagi untuk membuat Function, Procedure, dan Trigger.
 
 1. Membuat model `ItemCategory` beserta migrationnya.
 
@@ -67,13 +66,43 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
     
     ![](carbon/15.png)
 
+1. Membuat sebuah file migration untuk function bernama `item_id_function`
+
+    ![](carbon/42.png)
+
+    ![](carbon/39.png)
+
+1. Membuat sebuah file migration untuk function bernama `item_quantity_function`
+
+    ![](carbon/43.png)
+
+    ![](carbon/40.png)
+
+1. Membuat sebuah file migration untuk procedure bernama `reduce_stock_item_procedure`
+
+    ![](carbon/44.png)
+
+    ![](carbon/41.png)
+
 1. Membuat sebuah file migration untuk trigger bernama `item_stock_trigger`
 
     ![](carbon/16.png)
 
     ![](carbon/17.png)
+
+1. Membuat seeder `ItemCategorySeeder`
     
-1. Memindahkan database migration ke database MySql
+    ![](carbon/30.png)
+
+1. Menambah data seeder ItemCategory pada `database/seeds/ItemCategorySeeder.php`
+
+    ![](carbon/31.png)
+
+1. Memanggil `ItemCategorySeeder` pada `DatabaseSeeder`
+
+    ![](carbon/32.png)
+    
+1. Melakukan migration ke database MySql
 
     ![](carbon/18.png)
     
@@ -81,6 +110,28 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
     
     ![](carbon/19.png)
     
+    **Khusus untuk pengguna linux,** Perintah `CREATE OR REPLACE` di Mysql Server Linux tidak ada, jadi jika dijalankan akan error seperti berikut
+    
+    ![](carbon/46.png)
+    
+    Untuk memperbaiki kode, ubah syntax Mysql menjadi seperti berikut
+    
+    - `database/migrations/2019_02_19_030567_item_id_function.php`
+    
+        ![](carbon/47.png)
+        
+    - `database/migrations/2019_02_19_030568_item_quantity_function.php`
+    
+        ![](carbon/48.png)
+        
+    - `database/migrations/2019_02_19_030639_reduce_stock_item_procedure.php`
+    
+        ![](carbon/49.png)
+        
+    - `database/migrations/2019_02_19_030817_item_stock_trigger.php`
+    
+        ![](carbon/50.png)
+
     Lalu ulangi lagi perintah berikut
 
     ![](carbon/18.png)
@@ -120,7 +171,15 @@ Di Laravel, untuk membuat halaman login lengkap dengan registernya, hanya perlu 
 
 Lalu refresh projek laravel pada browser
 
-## G. Mengubah Route
+## G. Mengganti Layout yang Sudah Ada
+
+1. Ubah layout `resources/views/home.blade.php` menjadi seperti berikut
+
+    ![](carbon/35.png)
+
+    Atau copy code [berikut](https://raw.githubusercontent.com/Khoiron14/kasir/55559ebc26156193fb2c1405f1c9943ffea7c0df/resources/views/home.blade.php)
+
+## H. Mengubah Route
 1. Mengubah route `/` mengarah ke home pada file `routes/web.php`
 
     ![](carbon/27.png)
@@ -147,37 +206,11 @@ Lalu refresh projek laravel pada browser
     
         ![](carbon/29.png)
 
-## H. Seeder ItemCategory
+## H. Menampilkan data Item
+1. Mengirim data Item ke route '/' (home)
+    Buka file `app\Http\Controllers\HomeController.php` dan tambahkan code berikut
 
-1. Membuat `ItemCategorySeeder`
-    
-    ![](carbon/30.png)
-
-1. Menambah data seeder ItemCategory pada `database/seeds/ItemCategorySeeder.php`
-
-    ![](carbon/31.png)
-
-1. Memanggil `ItemCategorySeeder` pada `DatabaseSeeder`
-
-    ![](carbon/32.png)
-    
-1. Mengirim data `Item` ke `/` pada `app/Http/Controllers/HomeController.php`
-
-    ![](carbon/33.png                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               )
-
-1. (Update) mendefinisikan foreignKey `ItemCategory` pada `app/Item.php`
-
-    ![](carbon/34.png)
-
-1. 
-
-## I. Mengganti Layout yang Sudah Ada
-
-1. Ubah layout `resources/views/home.blade.php` menjadi seperti berikut
-
-    ![](carbon/35.png)
-
-    Atau copy code [berikut](https://raw.githubusercontent.com/Khoiron14/kasir/55559ebc26156193fb2c1405f1c9943ffea7c0df/resources/views/home.blade.php)
+    ![](carbon/45.png)
 
 1. Menampilkan data item di home
 

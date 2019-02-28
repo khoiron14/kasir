@@ -110,6 +110,28 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
     
     ![](carbon/19.png)
     
+    **Khusus untuk pengguna linux,** Perintah `CREATE OR REPLACE` di Mysql Server Linux tidak ada, jadi jika dijalankan akan error seperti berikut
+    
+    ![](carbon/46.png)
+    
+    Untuk memperbaiki kode, ubah syntax Mysql menjadi seperti berikut
+    
+    - `database/migrations/2019_02_19_030567_item_id_function.php`
+    
+        ![](carbon/47.png)
+        
+    - `database/migrations/2019_02_19_030568_item_quantity_function.php`
+    
+        ![](carbon/48.png)
+        
+    - `database/migrations/2019_02_19_030639_reduce_stock_item_procedure.php`
+    
+        ![](carbon/49.png)
+        
+    - `database/migrations/2019_02_19_030817_item_stock_trigger.php`
+    
+        ![](carbon/50.png)
+
     Lalu ulangi lagi perintah berikut
 
     ![](carbon/18.png)

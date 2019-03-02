@@ -12,7 +12,7 @@
 
     ![](carbon/1.png)
     
-1. Selanjutnya masuk ke folder project kasir dan lanjut ke langkah berikutnya
+1. Selanjutnya masuk ke folder project kasir pada cmd dan lanjut ke langkah berikutnya
 
 ## C. Konfigurasi
 1. Buat database dengan nama `dbKasir`
@@ -184,7 +184,7 @@ Lalu refresh projek laravel pada browser
     
         ![](carbon/29.png)
 
-## H. Menampilkan data Item
+## I. Menampilkan data Item
 1. Mengirim data Item ke route '/' (home)
     Buka file `app\Http\Controllers\HomeController.php` dan tambahkan code berikut
 
@@ -201,3 +201,24 @@ Lalu refresh projek laravel pada browser
     Sehingga menjadi seperti berikut
     
     ![](carbon/38.png)
+
+## J. CRUD Keranjang
+1. Membuat file CartController.php
+
+    ![](carbon/46.png)
+
+1. Buka file `app\Http\Controllers\CartController.php` dan tambahkan fungsi berikut
+    
+    ![](carbon/47.png)
+
+1. Buka file `routes\web.php` dan tambahkan route berikut
+    
+    ![](carbon/48.png)
+
+1. Ubah form "Pilih Barang" pada `resources/views/home.blade.php`
+
+    ![](carbon/49.png)
+
+1. Ubah layout table keranjang pada `resources/views/home.blade.php`
+
+    ![](carbon/50.png)

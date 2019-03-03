@@ -244,3 +244,30 @@ Lalu refresh projek laravel pada browser
 1. Ubah layout table keranjang pada `resources/views/home.blade.php`
 
     ![](carbon/55.png)
+
+## K. CRUD Transaksi
+1. Membuat file TransactionController.php
+    
+    ![](carbon/56.png)
+
+1. Buka file `app\Http\Controllers\TransactionController.php` dan tambahkan fungsi berikut
+    
+    ![](carbon/57.png)
+
+1. Buka file `routes\web.php` dan tambahkan route berikut
+    
+    ![](carbon/58.png)
+
+1. Ubah form "Pembayaran" pada `resources/views/home.blade.php`
+
+    ![](carbon/59.png)
+
+1. Buatlah folder bernama "transaction" pada `resources/views/`
+
+1. Tambahkan file index.blade.php pada folder transaction sebagai layout daftar transaksi
+    
+    ![](carbon/60.png)
+
+1. Tambahkan file show.blade.php pada folder transaction sebagai layout detail transaksi
+    
+    ![](carbon/61.png)

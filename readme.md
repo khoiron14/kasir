@@ -38,7 +38,7 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
 
     ![](carbon/6.png)
     
-    Buka file migration yang telah dibuat dan inisialisasikan atribut tablenya.
+    Buka file migration `ItemCategory` yang telah dibuat pada direktori `/database/migrations` dan inisialisasikan atribut tablenya.
 
     ![](carbon/7.png)
 

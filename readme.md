@@ -283,15 +283,15 @@ Lalu refresh projek laravel pada browser
 
 1. Buatlah folder bernama "image" pada `public/` dan isi folder tersebut dengan beberapa gambar
 
-1. Insert data Item pada database melalui phpmyadmin/tinker
+1. Insert data Item pada database melalui phpmyadmin/tinker,
     untuk kolom "image" isilah dengan path file gambar yang ada di folder `public/image`, contoh: image/buku.png
 
-1. Ubahlah beberapa element yang ada pada `resources/views/home.blade.php`
+1. Ubahlah beberapa element yang ada pada file `resources/views/home.blade.php`
 
     ![](carbon/64.png)
 
     ![](carbon/65.png)
 
-1. Lakukan hal yang sama seperti diatas pada `resources/views/transaction/show.blade.php`
+1. Lakukan hal yang sama seperti diatas pada file `resources/views/transaction/show.blade.php`
 
 

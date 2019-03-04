@@ -11,7 +11,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Nama Barang</th>
                 <th scope="col">Kategori</th>
-                <th scope="col">Deskripsi</th>
+                <th scope="col">Foto</th>
                 <th scope="col">Harga</th>
                 <th scope="col">Jumlah</th>
                 <th scope="col">Subtotal</th>
@@ -23,7 +23,9 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $detail->item->name }}</td>
                     <td>{{ $detail->item->category->name }}</td>
-                    <td>{{ $detail->item->description }}</td>
+                    <td>
+                        <img src="{{ asset($detail->item->image) }}" width="50px" height="50px">
+                    </td>
                     <td>Rp {{ $detail->item->price }}</td>
                     <td>{{ $detail->quantity }}</td>
                     <td>Rp {{ $detail->subtotal }}</td>

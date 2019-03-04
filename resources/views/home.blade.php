@@ -38,7 +38,7 @@
                                                         <th scope="col">#</th>
                                                         <th scope="col">Nama Barang</th>
                                                         <th scope="col">Kategori</th>
-                                                        <th scope="col">Deskripsi</th>
+                                                        <th scope="col">Foto</th>
                                                         <th scope="col">Harga</th>
                                                         <th scope="col">Stok</th>
                                                         <th scope="col">Opsi</th>
@@ -50,7 +50,9 @@
                                                             <th scope="row">{{ $loop->iteration }}</th>
                                                             <td>{{ $item->name }}</td>
                                                             <td>{{ $item->category->name }}</td>
-                                                            <td>{{ $item->description }}</td>
+                                                            <td>
+                                                                <img src="{{ asset($item->image) }}" width="50px" height="50px">
+                                                            </td>
                                                             <td>Rp {{ $item->price }}</td>
                                                             <td>{{ $item->stock }}</td>
                                                             <td>
@@ -163,7 +165,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Nama Barang</th>
                 <th scope="col">Kategori</th>
-                <th scope="col">Deskripsi</th>
+                <th scope="col">Foto</th>
                 <th scope="col">Harga</th>
                 <th scope="col">Jumlah</th>
                 <th scope="col">Subtotal</th>
@@ -176,7 +178,9 @@
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->category->name }}</td>
-                    <td>{{ $item->description }}</td>
+                    <td>
+                        <img src="{{ asset($item->image) }}" width="50px" height="50px">
+                    </td>
                     <td>Rp {{ $item->price }}</td>
                     <td>{{ $item->cart->quantity }}</td>
                     <td>Rp {{ $item->price * $item->cart->quantity }}</td>

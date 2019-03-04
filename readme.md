@@ -12,7 +12,7 @@
 
     ![](carbon/1.png)
     
-1. Selanjutnya masuk ke folder project kasir dan lanjut ke langkah berikutnya
+1. Selanjutnya masuk ke folder project kasir pada cmd dan lanjut ke langkah berikutnya
 
 ## C. Konfigurasi
 1. Buat database dengan nama `dbKasir`
@@ -38,7 +38,7 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
 
     ![](carbon/6.png)
     
-    Buka file migration yang telah dibuat dan inisialisasikan atribut tablenya.
+    Buka file migration `ItemCategory` yang telah dibuat pada direktori `/database/migrations` dan inisialisasikan atribut tablenya.
 
     ![](carbon/7.png)
 
@@ -206,7 +206,7 @@ Lalu refresh projek laravel pada browser
     
         ![](carbon/29.png)
 
-## H. Menampilkan data Item
+## I. Menampilkan data Item
 1. Mengirim data Item ke route '/' (home)
     Buka file `app\Http\Controllers\HomeController.php` dan tambahkan code berikut
 
@@ -223,3 +223,75 @@ Lalu refresh projek laravel pada browser
     Sehingga menjadi seperti berikut
     
     ![](carbon/38.png)
+
+## J. CRUD Keranjang
+1. Membuat file CartController.php
+
+    ![](carbon/51.png)
+
+1. Buka file `app\Http\Controllers\CartController.php` dan tambahkan fungsi berikut
+    
+    ![](carbon/52.png)
+
+1. Buka file `routes\web.php` dan tambahkan route berikut
+    
+    ![](carbon/53.png)
+
+1. Ubah form "Pilih Barang" pada `resources/views/home.blade.php`
+
+    ![](carbon/54.png)
+
+1. Ubah layout table keranjang pada `resources/views/home.blade.php`
+
+    ![](carbon/55.png)
+
+## K. CRUD Transaksi
+1. Membuat file TransactionController.php
+    
+    ![](carbon/56.png)
+
+1. Buka file `app\Http\Controllers\TransactionController.php` dan tambahkan fungsi berikut
+    
+    ![](carbon/57.png)
+
+1. Buka file `routes\web.php` dan tambahkan route berikut
+    
+    ![](carbon/58.png)
+
+1. Ubah form "Pembayaran" pada `resources/views/home.blade.php`
+
+    ![](carbon/59.png)
+
+1. Buatlah folder bernama "transaction" pada `resources/views/`
+
+1. Tambahkan file index.blade.php pada folder transaction sebagai layout daftar transaksi
+    
+    ![](carbon/60.png)
+
+1. Tambahkan file show.blade.php pada folder transaction sebagai layout detail transaksi
+    
+    ![](carbon/61.png)
+
+## L. Akses File
+1. Buka file `database/migrations/..._create_items_table.php` dan ubah kolom description menjadi image
+
+    ![](carbon/62.png)
+
+1. Lakukan perintah berikut untuk migrasi ulang database
+    
+    ![](carbon/63.png)
+
+1. Buatlah folder bernama "image" pada `public/` dan isi folder tersebut dengan beberapa gambar
+
+1. Insert data Item pada database melalui phpmyadmin/tinker,
+    untuk kolom "image" isilah dengan path file gambar yang ada di folder `public/image`, contoh: image/buku.png
+
+1. Ubahlah beberapa element yang ada pada file `resources/views/home.blade.php`
+
+    ![](carbon/64.png)
+
+    ![](carbon/65.png)
+
+1. Lakukan hal yang sama seperti diatas pada file `resources/views/transaction/show.blade.php`
+
+

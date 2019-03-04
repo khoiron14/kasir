@@ -272,7 +272,7 @@ Lalu refresh projek laravel pada browser
     
     ![](carbon/61.png)
 
-## Akses File
+## L. Akses File
 1. Buka file `database/migrations/..._create_items_table.php` dan ubah kolom description menjadi image
 
     ![](carbon/62.png)

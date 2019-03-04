@@ -19,7 +19,7 @@ class CreateItemsTable extends Migration
             $table->string('name');
             $table->unsignedInteger('price');
             $table->unsignedInteger('stock');
-            $table->text('description');
+            $table->string('image');
             $table->timestamps();
 
             $table->foreign('item_category_id')->references('id')->on('item_categories')->onDelete('cascade');

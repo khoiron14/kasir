@@ -1,5 +1,25 @@
 # Kasir Praktikum
 
+## Table of Contents
+
+- [A. Requirements](#a-requirements)
+- [B. Install](#b-install)
+- [C. Konfigurasi](#c-konfigurasi)
+- [D. Membuat File Migration dan Seed](#d-membuat-file-migration-dan-seed)
+- [E. Menambah Fungsi Relasi](#e-menambah-fungsi-relasi)
+- [F. Membuat Halaman Login](#f-membuat-halaman-login)
+- [G. Mengganti Layout yang Sudah Ada](#g-mengganti-layout-yang-sudah-ada)
+- [H. Mengubah Route](#h-mengubah-route)
+- [I. Menampilan Data Item](#i-menampilkan-data-item)
+- [J. CRUD Keranjang](#j-crud-keranjang)
+- [K. CRUD Transaksi](#k-crud-transaksi)
+- [L. Akses File](#l-akses-file)
+- [M. Insert Data Item](#m-insert-data-item)
+    1. [1. Melalui Phpmyadmin](#1-melalui-phpmyadmin)
+    1. [2. Melalui Laravel Tinker](#2-melalui-laravel-tinker)
+        1. [1. Insert satu persatu](#1-insert-satu-persatu)
+        1. [2. Insert sekaligus](#2-insert-sekaligus)
+
 ## A. Requirements
 - PHP versi 7.1.3 keatas
 - [Composer](https://getcomposer.org/)

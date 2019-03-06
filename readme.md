@@ -1,5 +1,25 @@
 # Kasir Praktikum
 
+## Table of Contents
+
+- [A. Requirements](#a-requirements)
+- [B. Install](#b-install)
+- [C. Konfigurasi](#c-konfigurasi)
+- [D. Membuat File Migration dan Seed](#d-membuat-file-migration-dan-seed)
+- [E. Menambah Fungsi Relasi](#e-menambah-fungsi-relasi)
+- [F. Membuat Halaman Login](#f-membuat-halaman-login)
+- [G. Mengganti Layout yang Sudah Ada](#g-mengganti-layout-yang-sudah-ada)
+- [H. Mengubah Route](#h-mengubah-route)
+- [I. Menampilan Data Item](#i-menampilkan-data-item)
+- [J. CRUD Keranjang](#j-crud-keranjang)
+- [K. CRUD Transaksi](#k-crud-transaksi)
+- [L. Akses File](#l-akses-file)
+- [M. Insert Data Item](#m-insert-data-item)
+    1. [1. Melalui Phpmyadmin](#1-melalui-phpmyadmin)
+    1. [2. Melalui Laravel Tinker](#2-melalui-laravel-tinker)
+        1. [Insert satu persatu](#insert-satu-persatu)
+        1. [Insert sekaligus](#insert-sekaligus)
+
 ## A. Requirements
 - PHP versi 7.1.3 keatas
 - [Composer](https://getcomposer.org/)
@@ -207,7 +227,7 @@ Lalu refresh projek laravel pada browser
         ![](carbon/29.png)
 
 ## I. Menampilkan data Item
-1. Mengirim data Item ke route '/' (home)
+1. Mengirim data Item ke route `/` (home)
     Buka file `app\Http\Controllers\HomeController.php` dan tambahkan code berikut
 
     ![](carbon/45.png)
@@ -225,7 +245,7 @@ Lalu refresh projek laravel pada browser
     ![](carbon/38.png)
 
 ## J. CRUD Keranjang
-1. Membuat file CartController.php
+1. Membuat file `CartController.php`
 
     ![](carbon/51.png)
 
@@ -246,7 +266,7 @@ Lalu refresh projek laravel pada browser
     ![](carbon/55.png)
 
 ## K. CRUD Transaksi
-1. Membuat file TransactionController.php
+1. Membuat file `TransactionController.php`
     
     ![](carbon/56.png)
 
@@ -264,11 +284,11 @@ Lalu refresh projek laravel pada browser
 
 1. Buatlah folder bernama "transaction" pada `resources/views/`
 
-1. Tambahkan file index.blade.php pada folder transaction sebagai layout daftar transaksi
+1. Tambahkan file `index.blade.php` pada folder transaction sebagai layout daftar transaksi
     
     ![](carbon/60.png)
 
-1. Tambahkan file show.blade.php pada folder transaction sebagai layout detail transaksi
+1. Tambahkan file `show.blade.php` pada folder transaction sebagai layout detail transaksi
     
     ![](carbon/61.png)
 
@@ -281,11 +301,6 @@ Lalu refresh projek laravel pada browser
     
     ![](carbon/63.png)
 
-1. Buatlah folder bernama "image" pada `public/` dan isi folder tersebut dengan beberapa gambar
-
-1. Insert data Item pada database melalui phpmyadmin/tinker,
-    untuk kolom "image" isilah dengan path file gambar yang ada di folder `public/image`, contoh: image/buku.png
-
 1. Ubahlah beberapa element yang ada pada file `resources/views/home.blade.php`
 
     ![](carbon/64.png)
@@ -294,4 +309,86 @@ Lalu refresh projek laravel pada browser
 
 1. Lakukan hal yang sama seperti diatas pada file `resources/views/transaction/show.blade.php`
 
+## M. Insert Data Item
+Untuk insert data pada laravel, tersedia dua pilihan, yaitu melalui Phpmyadmin dan Laravel Tinker.
+Sebelum menambahkan data Item, buatlah folder bernama "image" pada `public/` dan isi folder tersebut dengan beberapa gambar
 
+### 1. Melalui Phpmyadmin
+
+1. Masuk ke `localhost/phpmyadmin` melalui browser
+
+1. Pilih database `dbKasir` dan selanjutnya pilih tabel `items`
+
+1. Pilih tab Insert pada menu di bagian atas
+
+1. Masukkan data pada form yang sudah disediakan, untuk kolom image gunakan
+path gambar yang telah di tambahkan pada folder `public/image`, contoh: `image/sendok.png`
+
+1. Masukkan data seperti pada gambar berikut
+
+    ![](carbon/66.png)
+    
+1. Jika sudah, klik go dan data akan otomatis tersimpan pada database. Reload 
+dan cek pada database Mysql atau project laravel untuk mengecek, seperti pada gambar berikut
+
+    ![](carbon/67.png)
+
+### 2. Melalui Laravel Tinker
+Terdapat 2 cara, insert satu persatu dan insert sekaligus
+
+1. #### **Insert satu persatu**
+
+    1. Ketik perintah berikut pada cmd / terminal
+    
+        ![](carbon/68.png)
+    
+    1. Use Item model
+    
+        ![](carbon/69.png)
+    
+    1. Insert ke kolom `item_category_id`. 1=Makanan, 2=Minuman, 3=Alat Tulis, 4=Alat Dapur, 5=Pembersih
+    
+        ![](carbon/70.png)
+        
+    1. Insert ke kolom `name`
+    
+        ![](carbon/71.png)
+        
+    1. Insert ke kolom `price`
+    
+        ![](carbon/72.png)
+    
+    1. Insert ke kolom `stock`
+    
+        ![](carbon/73.png)
+        
+    1. Insert ke kolom `image` sesuai path gambar nya
+    
+        ![](carbon/74.png)
+    
+    1. Save
+    
+        ![](carbon/75.png)
+        
+    1. Contoh command lengkapnya seperti berikut
+    
+        ![](carbon/76.PNG)
+        
+    1. Pada saat menjalankan perintah `$item->save();`, jika mengeluarkan output
+    `true` berarti data sudah tersimpan di database Mysql. Untuk mengecek, bisa
+    dilihat pada Phpmyadmin ataupun pada list barang di projek laravel
+
+1. #### **Insert sekaligus**
+
+    1. Menggunakan model Item sekaligus meng insert data
+    
+        ![](carbon/77.PNG)
+
+    1. Save
+        
+        ![](carbon/78.PNG)
+
+    1. Data sudah tersimpan ke database, jika ingin menampilan data dalam
+    Array, ketik perintah berikut
+    
+        ![](carbon/79.PNG)

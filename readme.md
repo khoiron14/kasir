@@ -281,11 +281,6 @@ Lalu refresh projek laravel pada browser
     
     ![](carbon/63.png)
 
-1. Buatlah folder bernama "image" pada `public/` dan isi folder tersebut dengan beberapa gambar
-
-1. Insert data Item pada database melalui phpmyadmin/tinker,
-    untuk kolom "image" isilah dengan path file gambar yang ada di folder `public/image`, contoh: `image/buku.png`
-
 1. Ubahlah beberapa element yang ada pada file `resources/views/home.blade.php`
 
     ![](carbon/64.png)
@@ -294,4 +289,82 @@ Lalu refresh projek laravel pada browser
 
 1. Lakukan hal yang sama seperti diatas pada file `resources/views/transaction/show.blade.php`
 
+## M. Insert Data Item
+Untuk insert data pada laravel, tersedia dua pilihan, yaitu melalui _Phpmyadmin_ dan _Laravel/tinker_.
+Sebelum menambahkan data Item, buatlah folder bernama "image" pada `public/` dan isi folder tersebut dengan beberapa gambar
 
+#### 1. Melalui Phpmyadmin
+
+1. Masuk ke `localhost/phpmyadmin` melalui browser
+
+1. Pilih database `dbKasir` dan selanjutnya pilih tabel `items`
+
+1. Pilih tab Insert pada menu di bagian atas
+
+1. Masukkan data pada form yang sudah disediakan, untuk kolom image gunakan
+path gambar yang telah di tambahkan pada folder `public/image`, contoh: `image/sendok.png`
+
+1. Masukkan data seperti pada gambar berikut
+
+    ![](carbon/66.png)
+    
+1. Jika sudah, klik go dan data akan otomatis tersimpan pada database. Reload 
+dan cek pada project laravel untuk mengecek, seperti pada gambar berikut
+
+    ![](carbon/67.png)
+
+#### 2. Melalui Laravel Tinker
+Terdapat 2 cara, insert satu persatu dan insert sekaligus
+
+1. ##### Insert satu persatu
+
+    1. Ketik perintah berikut pada cmd / terminal
+    
+        ![](carbon/68.png)
+    
+    1. Use Item model
+    
+        ![](carbon/69.png)
+    
+    1. Insert ke kolom `item_category_id`. 1=Makanan, 2=Minuman, 3=Alat Tulis, 4=Alat Dapur, 5=Pembersih
+    
+        ![](carbon/70.png)
+        
+    1. Insert ke kolom `name`
+    
+        ![](carbon/71.png)
+        
+    1. Insert ke kolom `price`
+    
+        ![](carbon/72.png)
+    
+    1. Insert ke kolom `stock`
+    
+        ![](carbon/73.png)
+        
+    1. Insert ke kolom `image` sesuai path gambar nya
+    
+        ![](carbon/74.png)
+    
+    1. Save
+    
+        ![](carbon/75.png)
+        
+    1. Contoh command lengkapnya seperti berikut
+    
+        ![](carbon/76.PNG)
+
+1. ##### Insert sekaligus
+
+    1. Menggunakan model Item sekaligus meng insert data
+    
+        ![](carbon/77.PNG)
+
+    1. Save
+        
+        ![](carbon/78.png)
+
+    1. Data sudah tersimpan ke database, jika ingin menampilan data dalam
+    Array, ketik perintah berikut
+    
+        ![](carbon/79.PNG)

@@ -290,10 +290,10 @@ Lalu refresh projek laravel pada browser
 1. Lakukan hal yang sama seperti diatas pada file `resources/views/transaction/show.blade.php`
 
 ## M. Insert Data Item
-Untuk insert data pada laravel, tersedia dua pilihan, yaitu melalui _Phpmyadmin_ dan _Laravel/tinker_.
+Untuk insert data pada laravel, tersedia dua pilihan, yaitu melalui Phpmyadmin dan Laravel Tinker.
 Sebelum menambahkan data Item, buatlah folder bernama "image" pada `public/` dan isi folder tersebut dengan beberapa gambar
 
-#### 1. Melalui Phpmyadmin
+### 1. Melalui Phpmyadmin
 
 1. Masuk ke `localhost/phpmyadmin` melalui browser
 
@@ -309,14 +309,14 @@ path gambar yang telah di tambahkan pada folder `public/image`, contoh: `image/s
     ![](carbon/66.png)
     
 1. Jika sudah, klik go dan data akan otomatis tersimpan pada database. Reload 
-dan cek pada project laravel untuk mengecek, seperti pada gambar berikut
+dan cek pada database Mysql atau project laravel untuk mengecek, seperti pada gambar berikut
 
     ![](carbon/67.png)
 
-#### 2. Melalui Laravel Tinker
+### 2. Melalui Laravel Tinker
 Terdapat 2 cara, insert satu persatu dan insert sekaligus
 
-1. ##### Insert satu persatu
+1. #### Insert satu persatu
 
     1. Ketik perintah berikut pada cmd / terminal
     
@@ -353,8 +353,12 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
     1. Contoh command lengkapnya seperti berikut
     
         ![](carbon/76.PNG)
+        
+    1. Pada saat menjalankan perintah `$item->save();`, jika mengeluarkan output
+    `true` berarti data sudah tersimpan di database Mysql. Untuk mengecek, bisa
+    dilihat pada Phpmyadmin ataupun pada list barang di projek laravel
 
-1. ##### Insert sekaligus
+1. #### Insert sekaligus
 
     1. Menggunakan model Item sekaligus meng insert data
     

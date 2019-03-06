@@ -392,3 +392,9 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
     Array, ketik perintah berikut
     
         ![](carbon/79.PNG)
+
+<br>
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
+<br>

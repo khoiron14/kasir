@@ -207,7 +207,7 @@ Lalu refresh projek laravel pada browser
         ![](carbon/29.png)
 
 ## I. Menampilkan data Item
-1. Mengirim data Item ke route '/' (home)
+1. Mengirim data Item ke route `/` (home)
     Buka file `app\Http\Controllers\HomeController.php` dan tambahkan code berikut
 
     ![](carbon/45.png)
@@ -225,7 +225,7 @@ Lalu refresh projek laravel pada browser
     ![](carbon/38.png)
 
 ## J. CRUD Keranjang
-1. Membuat file CartController.php
+1. Membuat file `CartController.php`
 
     ![](carbon/51.png)
 
@@ -246,7 +246,7 @@ Lalu refresh projek laravel pada browser
     ![](carbon/55.png)
 
 ## K. CRUD Transaksi
-1. Membuat file TransactionController.php
+1. Membuat file `TransactionController.php`
     
     ![](carbon/56.png)
 
@@ -264,11 +264,11 @@ Lalu refresh projek laravel pada browser
 
 1. Buatlah folder bernama "transaction" pada `resources/views/`
 
-1. Tambahkan file index.blade.php pada folder transaction sebagai layout daftar transaksi
+1. Tambahkan file `index.blade.php` pada folder transaction sebagai layout daftar transaksi
     
     ![](carbon/60.png)
 
-1. Tambahkan file show.blade.php pada folder transaction sebagai layout detail transaksi
+1. Tambahkan file `show.blade.php` pada folder transaction sebagai layout detail transaksi
     
     ![](carbon/61.png)
 
@@ -284,7 +284,7 @@ Lalu refresh projek laravel pada browser
 1. Buatlah folder bernama "image" pada `public/` dan isi folder tersebut dengan beberapa gambar
 
 1. Insert data Item pada database melalui phpmyadmin/tinker,
-    untuk kolom "image" isilah dengan path file gambar yang ada di folder `public/image`, contoh: image/buku.png
+    untuk kolom "image" isilah dengan path file gambar yang ada di folder `public/image`, contoh: `image/buku.png`
 
 1. Ubahlah beberapa element yang ada pada file `resources/views/home.blade.php`
 

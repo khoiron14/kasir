@@ -362,7 +362,7 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
 
     1. Save
         
-        ![](carbon/78.png)
+        ![](carbon/78.PNG)
 
     1. Data sudah tersimpan ke database, jika ingin menampilan data dalam
     Array, ketik perintah berikut

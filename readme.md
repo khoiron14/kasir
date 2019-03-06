@@ -17,8 +17,8 @@
 - [M. Insert Data Item](#m-insert-data-item)
     1. [1. Melalui Phpmyadmin](#1-melalui-phpmyadmin)
     1. [2. Melalui Laravel Tinker](#2-melalui-laravel-tinker)
-        1. [1. Insert satu persatu](#1-insert-satu-persatu)
-        1. [2. Insert sekaligus](#2-insert-sekaligus)
+        1. [Insert satu persatu](#insert-satu-persatu)
+        1. [Insert sekaligus](#insert-sekaligus)
 
 ## A. Requirements
 - PHP versi 7.1.3 keatas
@@ -336,7 +336,7 @@ dan cek pada database Mysql atau project laravel untuk mengecek, seperti pada ga
 ### 2. Melalui Laravel Tinker
 Terdapat 2 cara, insert satu persatu dan insert sekaligus
 
-1. #### Insert satu persatu
+1. #### **Insert satu persatu**
 
     1. Ketik perintah berikut pada cmd / terminal
     
@@ -378,7 +378,7 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
     `true` berarti data sudah tersimpan di database Mysql. Untuk mengecek, bisa
     dilihat pada Phpmyadmin ataupun pada list barang di projek laravel
 
-1. #### Insert sekaligus
+1. #### **Insert sekaligus**
 
     1. Menggunakan model Item sekaligus meng insert data
     

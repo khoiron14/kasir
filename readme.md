@@ -268,11 +268,11 @@ Lalu refresh projek laravel pada browser
 
     ![](carbon/36.png)
 
-    Untuk menampilkan modal seperti diatas saat button pilih barang di klik, tambahkan kode berikut pada bagian tag `<tbody>`
+    Edit file `resources/views/home.blade.php` dan tambahkan kode berikut pada tag `<tbody>` dibagian modal pada form "Pilih Barang"
     
     ![](carbon/37.png)
     
-    Sehingga menjadi seperti berikut
+    Jangan lupa tambahkan id pada setiap inputan
     
     ![](carbon/38.png)
 

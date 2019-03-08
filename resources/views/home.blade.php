@@ -63,6 +63,7 @@
                                                                     onclick="
                                                                         $('#itemId').val('{{ $item->id }}')
                                                                         $('#itemName').val('{{ $item->name }}')
+                                                                        $('#itemQty').attr('max', '{{ $item->stock }}')
                                                                     "
                                                                 >
                                                                     Pilih
@@ -80,7 +81,7 @@
 
                         <div class="form-group">
                             <div class="input-group">
-                                <input type="number" min="1" value="1" class="form-control" name="quantity" placeholder="Masukkan jumlah..." required>
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" id="itemQty" placeholder="Masukkan jumlah..." required>
                                 <div class="input-group-append">
                                     <span class="input-group-text">Unit</span>
                                 </div>

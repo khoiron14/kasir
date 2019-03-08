@@ -25,6 +25,10 @@
 - [Composer](https://getcomposer.org/)
 - Koneksi internet
 
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
+
 ## B. Install
 1. Install [Composer](https://getcomposer.org/download/)
 1. Buka CMD atau Terminal
@@ -33,6 +37,10 @@
     ![](carbon/1.png)
     
 1. Selanjutnya masuk ke folder project kasir pada cmd dan lanjut ke langkah berikutnya
+
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
 
 ## C. Konfigurasi
 1. Buat database dengan nama `dbKasir`
@@ -50,6 +58,10 @@
 1. Jalankan server laravel
 
     ![](carbon/5.png)
+
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
 
 ## D. Membuat File Migration dan Seed
 Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `Item`, `Cart`, `Transaction` dan `TransactionDetail`. Selain itu kita juga memerlukan 4 file migration lagi untuk membuat Function, Procedure, dan Trigger.
@@ -156,6 +168,10 @@ Dalam project ini ada 5 Model/Tabel yang perlu dibuat, yaitu: `ItemCategory`, `I
 
     ![](carbon/18.png)
 
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
+
 ## E. Menambah Fungsi Relasi
 Fungsi - fungsi ini terdapat pada direktori `app/` yang berfungsi untuk menyimpan seluruh file yang berkaitan dengan proses request dan response HTTP.
 
@@ -184,12 +200,20 @@ Fungsi - fungsi ini terdapat pada direktori `app/` yang berfungsi untuk menyimpa
     
     ![](carbon/25.png)
 
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
+
 ## F. Membuat Halaman Login
 Di Laravel, untuk membuat halaman login lengkap dengan registernya, hanya perlu menjalankan perintah berikut
 
 ![](carbon/26.png)
 
 Lalu refresh projek laravel pada browser
+
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
 
 ## G. Mengganti Layout yang Sudah Ada
 
@@ -198,6 +222,10 @@ Lalu refresh projek laravel pada browser
     ![](carbon/35.png)
 
     Atau copy code [berikut](https://raw.githubusercontent.com/Khoiron14/kasir/55559ebc26156193fb2c1405f1c9943ffea7c0df/resources/views/home.blade.php)
+
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
 
 ## H. Mengubah Route
 1. Mengubah route `/` mengarah ke home pada file `routes/web.php`
@@ -226,6 +254,10 @@ Lalu refresh projek laravel pada browser
     
         ![](carbon/29.png)
 
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
+
 ## I. Menampilkan data Item
 1. Mengirim data Item ke route `/` (home)
     Buka file `app\Http\Controllers\HomeController.php` dan tambahkan code berikut
@@ -236,13 +268,17 @@ Lalu refresh projek laravel pada browser
 
     ![](carbon/36.png)
 
-    Untuk menampilkan modal seperti diatas saat button pilih barang di klik, tambahkan kode berikut pada bagian tag `<tbody>`
+    Edit file `resources/views/home.blade.php` dan tambahkan kode berikut pada tag `<tbody>` dibagian modal pada form "Pilih Barang"
     
     ![](carbon/37.png)
     
-    Sehingga menjadi seperti berikut
+    Jangan lupa tambahkan id pada setiap inputan
     
     ![](carbon/38.png)
+
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
 
 ## J. CRUD Keranjang
 1. Membuat file `CartController.php`
@@ -264,6 +300,10 @@ Lalu refresh projek laravel pada browser
 1. Ubah layout table keranjang pada `resources/views/home.blade.php`
 
     ![](carbon/55.png)
+
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
 
 ## K. CRUD Transaksi
 1. Membuat file `TransactionController.php`
@@ -292,6 +332,10 @@ Lalu refresh projek laravel pada browser
     
     ![](carbon/61.png)
 
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
+
 ## L. Akses File
 1. Buka file `database/migrations/..._create_items_table.php` dan ubah kolom description menjadi image
 
@@ -308,6 +352,11 @@ Lalu refresh projek laravel pada browser
     ![](carbon/65.png)
 
 1. Lakukan hal yang sama seperti diatas pada file `resources/views/transaction/show.blade.php`
+
+
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
 
 ## M. Insert Data Item
 Untuk insert data pada laravel, tersedia dua pilihan, yaitu melalui Phpmyadmin dan Laravel Tinker.
@@ -392,3 +441,9 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
     Array, ketik perintah berikut
     
         ![](carbon/79.PNG)
+
+<br>
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
+<br>

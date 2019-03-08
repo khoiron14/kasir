@@ -1,5 +1,7 @@
 # Kasir Praktikum
 
+Note : **Kalo baca yang teliti ya bos!!!**
+
 ## Table of Contents
 
 - [A. Requirements](#a-requirements)

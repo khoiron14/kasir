@@ -27,13 +27,11 @@ class TransactionController extends Controller
 
             DB::table('carts')->delete();
 
+            DB::commit();
         } catch (Exception $e) {
             DB::rollback();
-            return redirect()->back();
         }
     	
-        DB::commit();
-
     	return redirect()->route('transaction.show', Transaction::latest()->first());
     }
 

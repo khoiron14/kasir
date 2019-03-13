@@ -445,11 +445,9 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
     
         ![](carbon/79.PNG)
 
-<br>
 <p align="right">
     <b><a href="#kasir-praktikum">↥ back to top</a></b>
 </p>
-<br>
 
 ## N. Membuat Unit Test
 1. Jalankan perintah berikut untuk membuat sebuah unit test

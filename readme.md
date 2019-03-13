@@ -17,11 +17,12 @@
 - [K. CRUD Transaksi](#k-crud-transaksi)
 - [L. Akses File](#l-akses-file)
 - [M. Insert Data Item](#m-insert-data-item)
-    1. [1. Melalui Phpmyadmin](#1-melalui-phpmyadmin)
-    1. [2. Melalui Laravel Tinker](#2-melalui-laravel-tinker)
+    * [Melalui Phpmyadmin](#1-melalui-phpmyadmin)
+    * [Melalui Laravel Tinker](#2-melalui-laravel-tinker)
         1. [Insert satu persatu](#insert-satu-persatu)
         1. [Insert sekaligus](#insert-sekaligus)
 - [N. Membuat Unit Test](#n-membuat-unit-test)
+- [O. Fixbug](#o-fixbug)
 
 ## A. Requirements
 - PHP versi 7.1.3 keatas
@@ -454,7 +455,7 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
 
     ![](carbon/80.png)
 
-    --unit menandakan bahwa test termasuk unit test
+    `--unit` menandakan bahwa test termasuk unit test
 
 1. Hapus beberapa file/folder
     
@@ -482,6 +483,22 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
     ![](carbon/82.png)
 
     ![](carbon/85.PNG)
+
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>
+
+## O. Fixbug
+Fixbug Transaksi (_max quantity_)
+
+1. Buka `app/Http/Controllers/TransactionController.php` 
+dan ubah kode menjadi seperti berikut
+
+    ![](carbon/86.png)
+
+1. Lalu pada `resources/views/home.blade.php` di line 214
+
+    ![](carbon/87.png)
 
 <p align="right">
     <b><a href="#kasir-praktikum">↥ back to top</a></b>

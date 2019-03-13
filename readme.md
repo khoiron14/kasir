@@ -471,7 +471,7 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
 
     ![](carbon/82.png)
 
-    ![](carbon/83.png)
+    ![](carbon/83.PNG)
 
 1. Perbaiki bagian yang salah
 
@@ -481,7 +481,7 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
     
     ![](carbon/82.png)
 
-    ![](carbon/85.png)
+    ![](carbon/85.PNG)
 
 <p align="right">
     <b><a href="#kasir-praktikum">↥ back to top</a></b>

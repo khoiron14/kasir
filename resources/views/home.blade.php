@@ -211,7 +211,7 @@
                                             
                                             <div class="form-group">
                                                 <div class="input-group">
-                                                    <input type="number" min="1" value="{{ $item->cart->quantity }}" class="form-control" name="quantity" placeholder="Masukkan jumlah..." required>
+                                                    <input type="number" min="1" max="{{ $item->stock }}" value="{{ $item->cart->quantity }}" class="form-control" name="quantity" placeholder="Masukkan jumlah..." required>
                                                     <div class="input-group-append">
                                                         <span class="input-group-text">Unit</span>
                                                         <button type="submit" class="btn btn-primary float-right">Ubah</button>

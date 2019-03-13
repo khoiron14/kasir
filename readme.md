@@ -21,6 +21,7 @@
     1. [2. Melalui Laravel Tinker](#2-melalui-laravel-tinker)
         1. [Insert satu persatu](#insert-satu-persatu)
         1. [Insert sekaligus](#insert-sekaligus)
+- [N. Membuat Unit Test](#n-membuat-unit-test)
 
 ## A. Requirements
 - PHP versi 7.1.3 keatas
@@ -449,3 +450,41 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
     <b><a href="#kasir-praktikum">↥ back to top</a></b>
 </p>
 <br>
+
+## N. Membuat Unit Test
+1. Jalankan perintah berikut untuk membuat sebuah unit test
+
+    ![](carbon/80.png)
+
+    --unit menandakan bahwa test termasuk unit test
+
+1. Hapus beberapa file/folder
+    
+    - `tests/Feature`
+    - `tests/Unit/ExampleTest.php`
+
+1. Buka file `tests/Unit/CategoryModelTest.php` dan edit seperti berikut
+
+    ![](carbon81.png)
+
+    Kita errorkan dahulu untuk mengetahui fungsi unit test (engga penting amat gan..)
+
+1. Jalankan perintah berikut
+
+    ![](carbon82.png)
+
+    ![](carbon83.png)
+
+1. Perbaiki bagian yang salah
+
+    ![](carbon84.png)
+
+1. Jalankan lagi perintah berikut
+    
+    ![](carbon82.png)
+
+    ![](carbon85.png)
+
+<p align="right">
+    <b><a href="#kasir-praktikum">↥ back to top</a></b>
+</p>

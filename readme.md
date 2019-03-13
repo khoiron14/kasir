@@ -463,25 +463,25 @@ Terdapat 2 cara, insert satu persatu dan insert sekaligus
 
 1. Buka file `tests/Unit/CategoryModelTest.php` dan edit seperti berikut
 
-    ![](carbon81.png)
+    ![](carbon/81.png)
 
     Kita errorkan dahulu untuk mengetahui fungsi unit test (engga penting amat gan..)
 
 1. Jalankan perintah berikut
 
-    ![](carbon82.png)
+    ![](carbon/82.png)
 
-    ![](carbon83.png)
+    ![](carbon/83.png)
 
 1. Perbaiki bagian yang salah
 
-    ![](carbon84.png)
+    ![](carbon/84.png)
 
 1. Jalankan lagi perintah berikut
     
-    ![](carbon82.png)
+    ![](carbon/82.png)
 
-    ![](carbon85.png)
+    ![](carbon/85.png)
 
 <p align="right">
     <b><a href="#kasir-praktikum">↥ back to top</a></b>

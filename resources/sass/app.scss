@@ -3,13 +3,15 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+//@import 'variables';
 
 // Bootstrap
 //@import '~bootstrap/scss/bootstrap';
 
 // Bulma
 @import "~bulma/bulma";
+
+@import "~bulma-divider/dist/css/bulma-divider";
 
 // Fontawesome
 @import '~@fortawesome/fontawesome-free/scss/solid';

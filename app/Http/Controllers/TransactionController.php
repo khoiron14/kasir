@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Transaction\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
-use App\Transaction;
-use App\Cart;
+use Transaction\Transaction;
+use Transaction\Cart;
 
 class TransactionController extends Controller
 {

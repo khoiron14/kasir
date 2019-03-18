@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Transaction\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Item;
+use Transaction\Item;
 
 class HomeController extends Controller
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Transaction\Http\Controllers;
 
-use App\Cart;
+use Transaction\Cart;
 
 class CartController extends Controller
 {

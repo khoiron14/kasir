@@ -1,12 +1,12 @@
 <?php
 
-namespace App;
+namespace Transaction;
 
 use Illuminate\Database\Eloquent\Model;
-use App\ItemCategory as Category;
-use App\Cart;
-use App\Transaction;
-use App\TransactionDetail;
+use Transaction\ItemCategory as Category;
+use Transaction\Cart;
+use Transaction\Transaction;
+use Transaction\TransactionDetail;
 
 class Item extends Model
 {

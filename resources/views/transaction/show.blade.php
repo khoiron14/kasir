@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero is-light is-fullheight">
+<section class="hero is-light is-fullheight" style="background-image: linear-gradient(to right bottom, #b9d4db, #b6cbe7, #d0bbe3, #eeaac3, #f2a490);">
     @include('layouts.navbar')
     <div class="hero-body">
         <div class="container">
             <div class="box">
                 <h3 class="title is-3 has-text-centered">Detail Transaksi</h3>
-                <table class="table is-striped is-fullwidth is-hoverable">
+                <table class="table is-fullwidth ">
                     <thead>
                     <tr>
                         <th scope="col">#</th>

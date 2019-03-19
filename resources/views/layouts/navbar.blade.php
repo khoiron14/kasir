@@ -1,4 +1,4 @@
-<nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" style="background-color: white; box-shadow: 0px 1px 6px 0px #00000061;">
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="{{ url('/') }}">
@@ -8,17 +8,17 @@
         <div class="navbar-menu">
             <div class="navbar-end">
                 <a class="navbar-item has-text-dark" id="navbar-hover" href="{{ route('transaction.index') }}">
-                        <span class="icon">
-                            <i class="fas fa-dollar-sign"></i>
-                        </span>
-                    Log Transaksi
+                    <span class="icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </span>
+                    &nbspLog Transaksi
                 </a>
                 <div class="navbar-item">
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link has-text-dark">
-                                <span class="icon">
-                                    <i class="fas fa-user"></i>
-                                </span>
+                            <span class="icon">
+                                <i class="fas fa-user"></i>
+                            </span>
                             &nbsp{{ Auth::user()->name }}
                         </a>
                         <div class="navbar-dropdown is-boxed">
@@ -26,7 +26,10 @@
                                href="{{ route('logout') }}"
                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                             >
-                                {{ __('Logout') }}
+                                <span class="icon">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </span>
+                                &nbsp{{ __('Logout') }}
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf

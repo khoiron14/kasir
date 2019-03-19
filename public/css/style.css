@@ -1,3 +1,12 @@
 #navbar-hover:hover{
     background-color: #eaeaea !important;
 }
+
+.table{
+    border-radius: 15px !important;
+    box-shadow: 0 0 1px 0px #000000de;
+}
+
+.box{
+    border-radius: 15px !important;
+}

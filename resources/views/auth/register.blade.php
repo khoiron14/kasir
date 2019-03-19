@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="hero is-fullheight is-light">
+<section class="hero is-fullheight is-light" style="background-image: linear-gradient(to right bottom, #5de9e0, #1dd3fc, #68b5ff, #ad90e2, #d16ba5);">
     <div class="hero-body">
         <div class="container">
             <center>

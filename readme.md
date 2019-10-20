@@ -1,6 +1,6 @@
 # Kasir Praktikum
 
-<h3><b> Note : Kalo baca yang teliti ya bos!!! </b></h3>
+<h3><b> Note : Kalo baca yang teliti ya bos!!!! </b></h3>
 
 ## Table of Contents
 

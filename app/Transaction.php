@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace Transaction;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
-use App\TransactionDetail as Detail;
+use Transaction\User;
+use Transaction\TransactionDetail as Detail;
 
 class Transaction extends Model
 {

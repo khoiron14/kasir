@@ -1,9 +1,9 @@
 <?php
 
-namespace App;
+namespace Transaction;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Item;
+use Transaction\Item;
 
 class ItemCategory extends Model
 {

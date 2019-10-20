@@ -1,77 +1,78 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
+<section class="hero is-fullheight is-light" style="background-image: linear-gradient(to right bottom, #5de9e0, #1dd3fc, #68b5ff, #ad90e2, #d16ba5);">
+    <div class="hero-body">
+        <div class="container">
+            <center>
+                <div class="box" style="width: 500px">
+                    <!--Register-->
+                    <h3 class="title is-3">{{ __('Register') }}</h3>
+                    <br>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
+                        <!--Input name-->
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input id="name" type="text" class="input is-rounded is-medium{{ $errors->has('name') ? ' is-danger' : '' }}" placeholder="{{ __('Name') }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
                                 @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
+                                    <p class="help is-danger" role="alert">
                                         <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
+                                    </p>
                                 @endif
-                            </div>
+                            </p>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
+                        <!--Input email-->
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input id="email" type="email" class="input is-rounded is-medium{{ $errors->has('email') ? ' is-danger' : '' }}" placeholder="{{ __('E-Mail Address') }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
                                 @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
+                                    <p class="help is-danger" role="alert">
                                         <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                    </p>
                                 @endif
-                            </div>
+                            </p>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
+                        <!--Input password-->
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input id="password" type="password" class="input is-rounded is-medium{{ $errors->has('password') ? ' is-danger' : '' }}" placeholder="{{ __('Password') }}" name="password" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
                                 @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                    <span class="help is-danger" role="alert">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
                                 @endif
+                            </p>
+                        </div>
+                        <!--Password confirmation-->
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input id="password-confirm" type="password" class="input is-rounded is-medium" placeholder="{{ __('Confirm Password') }}" name="password_confirmation" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <br>
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-medium is-info is-fullwidth is-rounded" type="submit">{{ __('Register') }}</button>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
+                        <a class="button is-text is-rounded" href="{{ route('login') }}">{{ __('Kembali ke halaman login') }}</a>
                     </form>
                 </div>
-            </div>
+            </center>
         </div>
     </div>
-</div>
+</section>
 @endsection
